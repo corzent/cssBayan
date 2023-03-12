@@ -25,10 +25,12 @@ h2 {
 .meme-block:hover .plus {
     background: url('../img/plus.svg') no-repeat;
     width: 18px;
+    height: 18px;
 }
 .meme:hover .plus {
     background: url('../img/xmark.svg') no-repeat;
     width: 18px;
+    height: 18px;
 }
 .meme:hover .meme-img {
     width: 40%;
