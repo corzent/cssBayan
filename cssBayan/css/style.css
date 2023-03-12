@@ -22,15 +22,21 @@ h2 {
     display: flex;
     justify-content: space-between;
 }
+.plus,
+.x {
+    display: none;
+    padding: 2px 15px 0 15px;
+    font-size: 20px;
+    transition: display 0.4s ease-in-out;
+}
 .meme-block:hover .plus {
-    background: url('../img/plus.svg') no-repeat;
-    width: 18px;
-    height: 18px;
+    display: block;
+}
+.meme:hover .x {
+    display: block;
 }
 .meme:hover .plus {
-    background: url('../img/xmark.svg') no-repeat;
-    width: 18px;
-    height: 18px;
+    display: none;
 }
 .meme:hover .meme-img {
     width: 40%;
