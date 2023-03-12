@@ -5,15 +5,44 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+h3 {
+    display: inline;
+    color: blue;
+    width: 100%;
+}
+.meme-block:hover h3 {
+    color: black;
+}
+.meme-block:hover h3::after {
+    content: '\271A';
+    float: right;
+    padding-right: 10px;
+}
 .meme {
     cursor: pointer;
 }
 .meme:hover .meme-img {
-    display: block;
+    width: 40%;
+}
+.meme:active h3 {
+    color: blue;
 }
 .meme-img {
-    display: none;
+    display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+.meme:hover h3::after {
+    content: '\2716';
+}
+.radio-accordion {
+    display: none;
+}
+input[type='radio']:checked ~ img {
     width: 40%;
+}
+input[type='radio']:checked ~ h3 {
+    color: black;
 }
