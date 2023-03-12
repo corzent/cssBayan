@@ -4,22 +4,31 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 h3 {
     display: inline;
     color: blue;
     width: 100%;
+    margin: 0;
 }
 .meme-block:hover h3 {
     color: black;
 }
-.meme-block:hover h3::after {
-    content: '\271A';
-    float: right;
-    padding-right: 10px;
-}
 .meme {
     cursor: pointer;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+.meme-block:hover .plus {
+    background: url('../img/plus.svg') no-repeat;
+    width: 18px;
+}
+.meme:hover .plus {
+    background: url('../img/xmark.svg') no-repeat;
+    width: 18px;
 }
 .meme:hover .meme-img {
     width: 40%;
@@ -33,9 +42,6 @@ h3 {
     margin-right: auto;
     width: 0;
     transition: width 0.3s ease-in-out;
-}
-.meme:hover h3::after {
-    content: '\2716';
 }
 .radio-accordion {
     display: none;
