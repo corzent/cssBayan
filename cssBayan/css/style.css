@@ -7,10 +7,11 @@ body {
     padding: 0 15px;
 }
 h2 {
-    display: inline;
     color: blue;
-    width: 100%;
     margin: 0;
+}
+h3 {
+    color: blue;
 }
 .meme-block:hover h2 {
     color: black;
@@ -41,7 +42,8 @@ h2 {
 .meme:hover .meme-img {
     width: 40%;
 }
-.meme:active h2 {
+.meme:active h2,
+.meme:active .x {
     color: blue;
 }
 .meme-img {
@@ -57,7 +59,7 @@ h2 {
 input[type='radio']:checked ~ img {
     width: 40%;
 }
-input[type='radio']:checked ~ h2 {
+input[type='radio']:checked ~ .title > h2 {
     color: black;
 }
 /* =====Media Queries===== */
